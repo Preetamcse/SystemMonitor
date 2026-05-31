@@ -1,6 +1,6 @@
 # SystemMonitor - C# Console Application
 
-A simple C# console app that keeps an eye on your computer's CPU, RAM, and Disk usage in real time. Every few seconds it logs the readings to a file and sends them to an API endpoint.
+A Simple C# Console App That Keeps An Eye On Your Computer's CPU, RAM, And Disk Usage In Real Time. Every Few Seconds It Logs The Readings To A File And Sends Them To An API Endpoint.
 
 ---
 

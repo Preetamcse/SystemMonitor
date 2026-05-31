@@ -36,7 +36,6 @@ SystemMonitor/
 
 ## Requirements
 
-- Windows OS
 - .NET 8.0 SDK
 - Visual Studio 2022
 

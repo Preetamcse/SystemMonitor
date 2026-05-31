@@ -1,6 +1,6 @@
 # SystemMonitor — C# Console Application
 
-SystemMonitor is a lightweight Windows console application built with C# and .NET 8. It continuously monitors your system's CPU usage, RAM consumption, and Disk space at a configurable time interval and outputs the results in real time. The project demonstrates clean architecture using interfaces, dependency injection, and a plugin-based design — making it easy to extend with new monitoring outputs. It currently supports two plugins: one that saves metrics to a local log file, and one that sends the data to an external API via HTTP POST.
+A simple C# console app that keeps an eye on your computer's CPU, RAM, and Disk usage in real time. Every few seconds it logs the readings to a file and optionally sends them to an API endpoint.
 
 ---
 

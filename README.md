@@ -95,4 +95,4 @@ Press `Ctrl+C` to stop.
 
 I used interfaces (`IMonitorPlugin`, `ISystemMetricsCollector`) to keep each part of the code separate. This means the file logger and API plugin work independently, and adding a new plugin in the future is easy without changing existing code.
 
-The main challenges were: `PerformanceCounter` in .NET 8 needs to be installed as a separate NuGet package, and `appsettings.json` must have **Copy to Output Directory** set to `Copy Always` — otherwise the app cannot find the config file when running.
+The main challenges were: `PerformanceCounter` in .NET 8 needs to be installed as a separate NuGet package, and `appsettings.json` must have **Copy to Output Directory** set to `Copy Always` - otherwise the app cannot find the config file when running.

@@ -1,6 +1,6 @@
 # SystemMonitor — C# Console Application
 
-A Windows system monitoring tool built with .NET 8 that tracks CPU, RAM, and Disk usage at regular intervals and reports via file logging and HTTP API.
+SystemMonitor is a lightweight Windows console application built with C# and .NET 8. It continuously monitors your system's CPU usage, RAM consumption, and Disk space at a configurable time interval and outputs the results in real time. The project demonstrates clean architecture using interfaces, dependency injection, and a plugin-based design — making it easy to extend with new monitoring outputs. It currently supports two plugins: one that saves metrics to a local log file, and one that sends the data to an external API via HTTP POST.
 
 ---
 
@@ -64,6 +64,13 @@ Edit `appsettings.json` to change the interval or API URL:
 
 ---
 
+## Prerequisites
+
+Before running, make sure you have these installed on your PC:
+
+- [Visual Studio 2022](https://visualstudio.microsoft.com/) (Community edition is free)
+- [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- Windows OS (required for CPU/RAM/Disk reading)
 
 ## How to Run
 

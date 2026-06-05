@@ -4,7 +4,6 @@ using SystemMonitor.Interfaces;
 using SystemMonitor.Plugins;
 using SystemMonitor.Services;
 
-Console.OutputEncoding = System.Text.Encoding.UTF8;
 
 var config = new ConfigurationBuilder()
     .SetBasePath(Directory.GetCurrentDirectory())

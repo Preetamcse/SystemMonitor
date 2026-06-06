@@ -18,13 +18,23 @@ public class WindowsMetricsCollector : ISystemMetricsCollector
     {
         var drive = new DriveInfo(Path.GetPathRoot(Environment.CurrentDirectory) ?? "C:\\");
         var mem = GC.GetGCMemoryInfo();
-        return new SystemMetrics
-        {
-            Cpu = Math.Round(_cpu?.NextValue() ?? 0, 1),
-            RamUsed = Math.Round(Process.GetCurrentProcess().WorkingSet64 / 1024.0 / 1024.0, 1),
-            RamTotal = Math.Round(mem.TotalAvailableMemoryBytes / 1024.0 / 1024.0, 1),
-            DiskUsed = Math.Round((drive.TotalSize - drive.TotalFreeSpace) / 1024.0 / 1024.0, 1),
-            DiskTotal = Math.Round(drive.TotalSize / 1024.0 / 1024.0, 1)
-        };
+       
+         double cpu = _cpu.NextValue();
+         double ramUsed =  Process.GetCurrentProcess().WorkingSet64 / 1024.0 / 1024.0;     
+
+         double ramTotal =  mem.TotalAvailableMemoryBytes / 1024.0 / 1024.0;
+     
+         double diskUsed =   (drive.TotalSize - drive.TotalFreeSpace) / 1024.0 / 1024.0;
+
+         double diskTotal =   drive.TotalSize / 1024.0 / 1024.0;
+
+          return new SystemMetrics
+          {
+              Cpu = Math.Round(cpu, 1),
+              RamUsed = Math.Round(ramUsed, 1),
+              RamTotal = Math.Round(ramTotal, 1),
+              DiskUsed = Math.Round(diskUsed, 1),
+              DiskTotal = Math.Round(diskTotal, 1)
+          };
     }
 }

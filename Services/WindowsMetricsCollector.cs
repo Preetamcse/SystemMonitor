@@ -24,9 +24,9 @@ public class WindowsMetricsCollector : ISystemMetricsCollector
 
          double ramTotal =  mem.TotalAvailableMemoryBytes / 1024.0 / 1024.0;
      
-         double diskUsed =   (drive.TotalSize - drive.TotalFreeSpace) / 1024.0 / 1024.0;
+         double diskUsed =   (drive.TotalSize - drive.TotalFreeSpace) / 1024.0 / 1024.0  / 1024.0;
 
-         double diskTotal =   drive.TotalSize / 1024.0 / 1024.0;
+         double diskTotal =   drive.TotalSize / 1024.0 / 1024.0  / 1024.0;
 
           return new SystemMetrics
           {

@@ -12,8 +12,11 @@ public class MonitoringService(ISystemMetricsCollector collector, IEnumerable<IM
         while (!ct.IsCancellationRequested)
         {
             var metrics = collector.Collect();
-            Console.WriteLine($"[{metrics.Time:HH:mm:ss}] CPU:{metrics.Cpu}% | RAM:{metrics.RamUsed}/{metrics.RamTotal}MB | Disk:{metrics.DiskUsed}/{metrics.DiskTotal}MB");
-
+             Console.WriteLine($"Time: [{metrics.Time:HH:mm:ss}]");
+             Console.WriteLine($"CPU: {metrics.Cpu}%");
+             Console.WriteLine($"RAM: {metrics.RamUsed}/{metrics.RamTotal} MB");
+             Console.WriteLine($"Disk: {metrics.DiskUsed}/{metrics.DiskTotal} MB");
+            
             foreach (var plugin in plugins) await plugin.Execute(metrics);
 
             Console.WriteLine();

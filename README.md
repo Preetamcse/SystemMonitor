@@ -82,7 +82,10 @@ Before running, make sure you have these installed on your PC:
 ```
 Monitoring started. Interval: 5s. Press Ctrl+C to stop.
 
-[14:32:01] CPU:12.4% | RAM:512/8192MB | Disk:120000/500000MB
+[14:32:01] 
+CPU:12.4% |
+RAM:512/8192MB | 
+Disk:120/500GB
 [FileLogger] Saved to system_log.txt
 [ApiPlugin] POST → 201
 ```
